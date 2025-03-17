@@ -183,7 +183,6 @@ header.sticky {
 
 /*-------------------------------------------------- Animated Pics--------------------------------------------*/
 .home-top{
-    
   margin: auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -191,8 +190,8 @@ header.sticky {
   max-width: 1200px;
   position: relative;
   justify-content: space-between;
-  height: 400px;
-  
+  height: 100%;
+  border-bottom: solid 2px #53292b;
 }
 
 /*------------------------------------------------- Animated Pics---------------------------------------------------*/
@@ -321,13 +320,6 @@ header.sticky {
   margin-left: 10%;
 }
 
-.mdl2 span{
-  position: relative;
-  font-size: 20px;
-  color: #141202;
-  text-transform: uppercase;
-  font-family: poppins;
-}
 
 .mdl h2::before{
   content: attr(data-text);
@@ -424,7 +416,9 @@ header.sticky {
 
 .mdl2{
   box-sizing: border-box;
+  text-align: justify;
 }
+
 
 .mdl{
   display: flex;
@@ -432,11 +426,78 @@ header.sticky {
 }
 /*==========================================text animation=====================================================*/
 
+/*-----------------------=======================3 cards====================-*/
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive columns */
+  gap: 20px; /* Space between grid items */
+  max-width: 1200px;
+  margin: 5% auto;
+  padding: 10px;
+  justify-content: center;
+}
 
+.three-col-bg {
+  height: 128px;
+  width: 128px;
+  background-color: #ffffff;
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  border-radius: 50%;
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+}
 
+.three-col {
+  -ms-flex-preferred-size: calc(33.33333% - 30px);
+  background-color: #53292b;
+  margin: 0 15px 30px;
+  overflow: hidden;
+  border-radius: 10px;
+  padding: 30px 20px;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  color: #fff;
+  text-align: justify;
+}
 
+.three-col:hover {
+  color: #141202;
+}
+.three-col-cov {
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
 
+.three-col:hover .three-col-bg {
+  -webkit-transform: scale(10);
+  -ms-transform: scale(10);
+  transform: scale(10);
+  cursor: pointer;
+}
 
+.three-col-text {
+  text-decoration: none;
+}
+
+.buttom{
+  height: 40px;
+  margin-top: 10px;
+}
+
+.button{
+  height: 100%;
+  width: 80px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/*-----------------------=======================3 cards====================-*/
 
 
 
