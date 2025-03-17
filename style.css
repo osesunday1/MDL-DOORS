@@ -1,0 +1,868 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body{
+    justify-content:center;
+    align-items: center;
+    min-height: 100vh;
+    background: #ffffff;
+}
+
+
+
+/*---------------========================NAVBAR================-----------------*/
+/* Navbar Main Styling */
+.navbar2 {
+  z-index: 999;
+  position: fixed;
+  width: 100%;
+  height: 7rem;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  transition: 0.5s ease;
+  transition-property: height, background;
+}
+
+/* Sticky Navbar */
+header.sticky {
+  height: calc(2.5rem + 1rem);
+  background: var(--special-color);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Navbar Inner Layout */
+.navbar2 .nav-bar {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0 200px;
+  transition: 0.3s ease;
+  background: #53292b;
+}
+
+.navbar2 .nav{
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  align-self: flex-end;
+  height: 100%;
+}
+/* Menu Items */
+.nav .upper-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+.nav .upper-menu .menu-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0px 15px;
+  height: 100%;
+}
+
+.nav .upper-menu .menu-item:hover {
+  border-bottom: solid 4px #c0b98b;
+  cursor: pointer;
+}
+
+
+.nav .upper-menu .menu-item a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.nav .upper-menu .menu-item a:hover {
+  color: #dbd7bc;
+}
+
+/* Logo */
+.nav img {
+  height: 120%;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+/* Dropdown Styling */
+.menu-item-has-children {
+  position: relative;
+}
+
+.menu-item-has-children .sub-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #350a0d;
+  border-radius: 5px;
+  padding: 10px;
+  list-style: none;
+  display: none;
+  width: 180px;
+  margin-top: 4px;
+}
+
+.menu-item-has-children:hover .sub-menu {
+  display: block;
+}
+
+.menu-item-has-children .sub-menu .menu-item {
+  padding: 8px 15px;
+}
+
+.menu-item-has-children .sub-menu .menu-item a {
+  color: white;
+  font-size: 14px;
+}
+
+/* Mobile Menu Button */
+.nav-close-btn,
+.nav-menu-btn {
+  display: none;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+  .navbar2 .nav-bar {
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-menu-btn {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+  }
+
+  .nav .upper-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: #53292b;
+    display: none;
+  }
+
+  .nav .upper-menu .menu-item {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  /* Show menu when active */
+  .nav.active .upper-menu {
+    display: flex;
+  }
+}
+/*---------------===========NAVBAR================-----------------*/
+
+
+
+/*---------------============================Section 1==========================----------------------*/
+#intro{
+  margin-top: 5%;
+}
+
+/*-------------------------------------------------- Animated Pics--------------------------------------------*/
+.home-top{
+    
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0rem;
+  max-width: 1200px;
+  position: relative;
+  justify-content: space-between;
+  height: 400px;
+  
+}
+
+/*------------------------------------------------- Animated Pics---------------------------------------------------*/
+
+
+.anime-row{
+  display: flex;
+  margin-top: 10%;
+  justify-content: space-between;
+  font-family: poppins;
+}
+
+.anime-row .col-1{
+  flex-basis: 40%;
+  max-width: 200px;
+  margin-bottom: 30px;
+  height: auto;
+  position: relative;
+  margin: auto;
+  
+}
+
+
+.anime-row .col-1 img{
+  width: 100%;
+  height: auto; 
+  display: block; 
+  object-fit: contain;
+}
+
+.elements2{
+  left: 0;
+  top: 0;
+  animation: move 5.5s linear infinite;
+}
+
+@keyframes move{
+  0%{
+      transform: translate(-90px, 0px);
+  }
+  50%{
+      transform: translate(90px, 0px);
+  }
+  100%{
+      transform: translate(-90px, 0px);
+  }
+  
+} 
+
+.elements1{
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: move1 5.5s linear infinite;
+}
+
+@keyframes move1{
+  0%{
+      transform: translate(90px, 0px);
+  }
+  50%{
+      transform: translate(-90px, 0px);
+  }
+  100%{
+      transform: translate(90px, 0px);
+  }
+  
+} 
+
+.elements3{
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: move2 3.5s linear infinite;
+}
+
+@keyframes move2{
+  0%{
+      transform: translate(0px, 0px);
+  }
+  60%{
+      transform: translate(0px, 0px);
+  }
+  100%{
+      transform: translate(0px, 0px);
+  }
+  
+} 
+
+
+
+/*==========================================text animation=====================================================*/
+
+.mdl2{
+  box-sizing: border-box;
+}
+
+.mdl{
+  display: block;
+  margin: auto;
+}
+
+.mdl h2{
+  position: relative;
+  font-size: 60px;
+  color: #ffffff;
+  font-family: poppins;
+  margin-top: 20%;
+  margin-left: 10%;
+}
+.mdl3 h3{
+  position: relative;
+  font-size: 60px;
+  font-weight: 300;
+  color: #53292b;
+  font-family: poppins;
+  margin-left: 10%;
+}
+
+
+.mdl2 p{
+  position: relative;
+  font-size: 20px;
+  color: #252839;
+  font-family: poppins;
+  margin-left: 10%;
+}
+
+.mdl2 span{
+  position: relative;
+  font-size: 20px;
+  color: #141202;
+  text-transform: uppercase;
+  font-family: poppins;
+}
+
+.mdl h2::before{
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  color: #53292b;
+  -webkit-text-stroke: 0vw #383d52;
+  border-right: 2px solid #53292b;
+  overflow: hidden;
+  animation: anim 3s linear infinite;
+}
+
+@keyframes anim
+{
+  0%,10%,100%
+  {
+      width: 0;
+  }
+  70%, 90% 
+  {
+      width: 100%;
+  }
+  
+}
+
+
+@media screen and (max-width: 1200px){
+
+  .home-top {
+      display: grid;
+      gap: 0rem;
+      grid-template-columns: repeat(1, 1fr);
+      padding-block: 2rem;
+      width: min(95%, 70rem);
+    }
+
+    .mdl h2{
+      position: relative;
+      font-size: 60px;
+      color: #ffffff;
+      font-family: poppins;
+      margin-top: 20%;
+    }
+
+    .mdl3 h3{
+      position: relative;
+      font-size: 50px;
+      font-weight: 300;
+      color: #53292b;
+      font-family: poppins;
+    }
+    
+    .mdl2 p{
+      position: relative;
+      font-size: 20px;
+      color: #252839;
+      text-transform: uppercase;
+    }
+
+    .anime-row{
+      display:none;
+      justify-content: space-between;
+      box-sizing: border-box;
+    }
+    
+    .anime-row .col-1{
+      min-width: 300px;
+      margin-bottom: 30px;
+      position:absolute;
+      margin: auto;
+      box-sizing: border-box;
+    }
+    
+    
+    .anime-row .col-1 img{
+      width: 100%;
+    }
+
+    .elements{
+      position: block;
+    }
+
+    .elements2{
+      position: block;
+    }
+    .elements3{
+      position: block;
+    }
+}
+
+
+.mdl2{
+  box-sizing: border-box;
+}
+
+.mdl{
+  display: flex;
+  margin: auto;
+}
+/*==========================================text animation=====================================================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------=======================first card====================----------------------------*/
+.container1{
+    margin: auto;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    padding:40px 0;
+    z-index: 1;
+} 
+
+.container1 .card1{
+    position: relative;
+    width: 320px;
+    height: 440px;
+    box-shadow: inset 5px 5px 5px rgba(0,0,0,0.06),
+                inset -5px -5px 5px rgba(255,255,255,0.6),
+                5px 5px 5px rgba(0,0,0,0.06),
+                -5px -5px 5px rgba(255,255,255,0.6);
+    border-radius: 15px;
+    margin: 30px;
+}
+
+.container1 .card1 .box{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background: #ffffff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.container1 .card1:hover .box{
+    transform: translateY(-50px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.container1 .card1 .box .content{
+    padding: 20px;
+    text-align: center;
+}
+
+.container1 .card1 .box .content h2{
+    position: absolute;
+    top: -10px;
+    right: 30px;
+    font-size: 8em;
+    color: #53292b;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.container1 .card1:hover .box .content h2{
+    color: rgba(0,0,0,0.05);
+}
+
+.container1 .card1 .box .content h3{
+    font-size: 1.3em;
+    color: #03a9f4;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.container1 .card1 .box .content p{
+    font-size:1em;
+    font-weight:300;
+    color: #777;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.container1 .card1 .box .content a{
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    background: #03a9f4;
+    border-radius: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400px;
+    margin-top: 3%; 
+}
+
+.container1 .card1:hover .box .content a{
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); 
+}
+
+.container1 .card1 .box .content a:hover{
+    background: #ff0057;
+    
+}
+
+
+
+/*----------------------- first card popup----------------------------*/
+.popup-container{
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.popup-container.show{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.popup-container .popup{
+  background: #ffffff;
+  width: 600px;
+  max-width: 100%;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  
+}
+
+
+.container1-popup .popup-container .popup button{
+  position: relative;
+  display: inline-block;
+  padding: 8px 20px;
+  background: #03a9f4;
+  border-radius: 20px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400px;
+  margin: auto; 
+}
+
+
+
+
+/*----------------------- first card popup----------------------------*/
+
+
+/*-----------------------========= ==================first card====================----------------------------*/
+/*----------------------- second card----------------------------*/
+
+.container2{
+    
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0rem;
+    max-width: 1200px;
+    position: relative;
+    justify-content: space-between;
+    
+}
+
+.container2 .card{
+    position: relative;
+}
+
+.container2 .card .face .content .top1{
+  position: absolute; /* Set the child div to have an absolute position */
+  top: 10%; /* Position the child div at the top of its parent */
+  height: 50px; /* Set the height of the child div */
+  transform: translateX(-50%);
+  left: 50%;
+  font-family: poppins;
+  font-weight: 100;
+  font-size: medium;
+  color: #ffffff;;
+}
+
+.container2 .card .face .content .top2{
+  position: absolute; /* Set the child div to have an absolute position */
+  top: 10%; /* Position the child div at the top of its parent */
+  height: 50px; /* Set the height of the child div */
+  transform: translateX(-50%);
+  left: 50%;
+  font-family: poppins;
+  font-weight: 100;
+  font-size: medium;
+  color: #03a9f4;
+}
+
+.container2 .card .face{
+    margin: auto;
+    width: 350px;
+    height:200px;
+    transition: 0.5s;
+}
+
+.container2 .card .face.face1{
+    position: relative;
+    background: #03a9f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+.container2 .card:hover .face.face1{
+    transform: translateY(0px);
+    background: #ff0057;
+
+}
+
+
+.container2 .card .face.face1 .content{
+    opacity: 0.2;
+    transition: 0.5s;
+}
+
+.container2 .card:hover .face.face1 .content{
+    opacity: 1;
+}
+
+.container2 .card:hover .face.face1 .content img{
+    max-width: 100px;
+}
+
+.container2 .card:hover .face.face1 .content h3{
+    margin: 10px 0 0;
+    padding: 0;
+    color:#fff;
+    text-align: center;
+    font-size: 1.3m;
+}
+
+.container2 .card .face.face2{
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+    transform: translateY(-100px);
+}
+.container2 .card:hover .face.face2{
+    transform: translateY(0px);
+}
+
+.container2 .card .face.face2 .content p{
+    margin: 0;
+    padding: 0;
+}
+
+.container2 .card .face.face2 .content a{
+    margin: 15px 0 0;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #333; 
+    padding: 5px;
+    border: 1px solid #333
+}
+
+.container2 .card .face.face2 .content a:hover{
+    background: #333;
+    color: #fff;
+}
+
+
+/*-------------- media----------------*/
+
+@media screen and (max-width: 1200px){
+
+    .container2 {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: repeat(1, 1fr);
+        padding-block: 2rem;
+        width: min(95%, 70rem);
+        margin-inline: auto;
+      }
+}
+
+ 
+/* =============================second input=========================*/
+
+
+/*=================================== footer=========================== */
+.footer {
+  position: relative;
+  width: 100%;
+  padding: 15px 200px;
+  background: #4a98f7;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer h2{
+  font-family: poppins;
+  font-size: 10px;
+  font-weight: 50;
+  color: #ffffff;
+}
+
+/*=================================== footer=========================== */
+
+/*=================================== Navbar=========================== */
+
+
+
+/*---------------Slider----------------------*/
+.container-slider{
+  padding: 2rem;
+  scroll-behavior: smooth;
+}
+
+.slider-wrapper{
+  position: relative;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.slider{
+  display: flex;
+  aspect-ratio: 16 / 9;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+  border-radius: 0.5rem;
+}
+
+.slider img{
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+}
+
+.slider-nav {
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.slider-nav a{
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50;
+  background-color: #4a98f7;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+  scroll-behavior: smooth;
+}
+
+.slider-nav a:hover{
+  opacity: 1;
+}
+
+/*---------------Slider----------------------*/
