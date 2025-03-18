@@ -109,7 +109,7 @@ header.sticky {
   top: 100%;
   left: 0;
   background: #350a0d;
-  border-radius: 5px;
+  border-radius: 0px 5px;
   padding: 10px;
   list-style: none;
   display: none;
@@ -191,7 +191,7 @@ header.sticky {
   position: relative;
   justify-content: space-between;
   height: 100%;
-  border-bottom: solid 2px #53292b;
+  border-bottom: solid 1px #53292b;
 }
 
 /*------------------------------------------------- Animated Pics---------------------------------------------------*/
@@ -365,6 +365,7 @@ header.sticky {
       color: #ffffff;
       font-family: poppins;
       margin-top: 20%;
+      margin-left: 0px;
     }
 
     .mdl3 h3{
@@ -373,6 +374,7 @@ header.sticky {
       font-weight: 300;
       color: #53292b;
       font-family: poppins;
+      margin-left: 0px;
     }
     
     .mdl2 p{
@@ -380,6 +382,7 @@ header.sticky {
       font-size: 20px;
       color: #252839;
       text-transform: uppercase;
+      margin-left: 0px;
     }
 
     .anime-row{
@@ -458,36 +461,61 @@ header.sticky {
   border-radius: 10px;
   padding: 30px 20px;
   overflow: hidden;
-  display: block;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
   position: relative;
-  cursor: pointer;
   color: #fff;
   text-align: justify;
 }
 
 .three-col:hover {
   color: #141202;
+  border: solid 1px #53292b;
 }
+
 .three-col-cov {
-  display: block;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   position: relative;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .three-col:hover .three-col-bg {
   -webkit-transform: scale(10);
   -ms-transform: scale(10);
   transform: scale(10);
-  cursor: pointer;
 }
 
-.three-col-text {
-  text-decoration: none;
+.three-col-text p{
+  font-weight: 100;
 }
+
+
+.cardHeading h2{
+  font-size: 30px;
+  font-weight: 200;
+}
+.cardHeading2{
+  display: flex;
+  justify-content: center;
+  margin: 15px;
+}
+
+.cardHeading2 h2{
+  font-size: 20px;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
 
 .buttom{
   height: 40px;
-  margin-top: 10px;
+  align-self: flex-end;
 }
 
 .button{
@@ -495,6 +523,30 @@ header.sticky {
   width: 80px;
   cursor: pointer;
   font-size: 15px;
+}
+
+.button:hover{
+  color: #fff;
+  background: #53292b;
+}
+
+
+@media screen and (max-width: 1024px){
+.three-col:hover {
+  color: #ffffff;
+  border: none;
+}
+.three-col:hover .three-col-bg {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.button:hover{
+  color: #0a0a0a;
+  background: #cac5c5;
+}
+
 }
 
 /*-----------------------=======================3 cards====================-*/
