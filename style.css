@@ -115,7 +115,7 @@ body{
   text-decoration: none;
   color: white;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 200;
   transition: 0.3s ease;
 }
 
@@ -160,11 +160,26 @@ body{
   font-size: 14px;
 }
 
-/* Mobile Menu Button */
-.nav-close-btn,
-.nav-menu-btn {
-  display: none;
+/* Default: Hide the mobile dropdown */
+.mobile-dropdown {
+  position: absolute;
+  top: -100%; /* Initially positioned above the screen */
+  left: 0;
+  width: 100%;
+  background: #53292b;
+  z-index: 999;
+  padding: 10px 0;
+  opacity: 0;
+  transform: translateY(-10px); /* Start slightly above */
+  transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+  display: none; /* Keep hidden by default */
 }
+.mobile-dropdown.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0); /* Moves into place smoothly */
+}
+
 
 /* Mobile Responsiveness */
 @media (max-width: 1024px) {
@@ -174,12 +189,7 @@ body{
 }
 
 @media (max-width: 768px) {
-  .nav-menu-btn {
-    display: block;
-    font-size: 24px;
-    cursor: pointer;
-    color: white;
-  }
+
 
   .nav .upper-menu {
     position: absolute;
@@ -191,15 +201,48 @@ body{
     display: none;
   }
 
-  .nav .upper-menu .menu-item {
-    width: 100%;
-    text-align: center;
-    padding: 15px 0;
+}
+
+
+/* Mobile Dropdown Menu Items */
+.mobile-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.mobile-menu .menu-item {
+  padding: 10px;
+}
+
+.mobile-menu .menu-item a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+}
+
+/* Ensure all links appear inside the mobile dropdown */
+.mobile-menu .menu-item:hover {
+  background: #c0b98b;
+}
+
+/* Show the mobile logo only on smaller screens */
+.mobileLogo {
+  display: none;
+  max-height: 50px;
+  cursor: pointer;
+}
+
+/* Hide big logo in mobile view */
+@media (max-width: 1024px) {
+  .bigLogo {
+      display: none;
   }
 
-  /* Show menu when active */
-  .nav.active .upper-menu {
-    display: flex;
+  .mobileLogo {
+      display: block;
   }
 }
 /*---------------===========NAVBAR================-----------------*/
