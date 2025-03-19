@@ -22,8 +22,8 @@ body{
 .navbar2 {
   z-index: 999;
   position: fixed;
-  width: 100%;
-  height: 7rem;
+  width: 100vw;
+  height: 8rem;
   top: 0;
   left: 0;
   display: flex;
@@ -32,30 +32,59 @@ body{
   transition-property: height, background;
 }
 
-/* Sticky Navbar */
-header.sticky {
-  height: calc(2.5rem + 1rem);
-  background: var(--special-color);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
 
 /* Navbar Inner Layout */
 .navbar2 .nav-bar {
-  position: relative;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100%;
-  padding: 0 200px;
   transition: 0.3s ease;
-  background: #53292b;
+}
+
+.navbar2 .navTop{
+  display: flex;
+  justify-content: flex-start;
+  gap: 5px;
+  margin: 0 auto;
+  height: 2rem;
+  width: 100%;
+  padding: 5px 20px ;
+  background: #dbd7bc;
+}
+
+.upper-menu{
+  list-style: none; 
+  gap: 15px;
+  text-decoration: none;
+}
+
+.upper-menu .menu-top a{
+  text-decoration: none;
+  color:#53292b;
+  gap: 15px;
+}
+
+.navbar2 .navBottom{
+  display: flex;
+  background:#53292b; 
+  height: 6rem;
+}
+.navbar2 .upper-menu{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .navbar2 .nav{
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
   margin: 0 auto;
-  align-self: flex-end;
-  height: 100%;
+  
 }
 /* Menu Items */
 .nav .upper-menu {
@@ -76,7 +105,8 @@ header.sticky {
 }
 
 .nav .upper-menu .menu-item:hover {
-  border-bottom: solid 4px #c0b98b;
+  border-bottom: solid 2px #c0b98b;
+  color: #dbd7bc;
   cursor: pointer;
 }
 
@@ -89,14 +119,13 @@ header.sticky {
   transition: 0.3s ease;
 }
 
-.nav .upper-menu .menu-item a:hover {
+.nav .upper-menu .menu-item:hover  a{
   color: #dbd7bc;
 }
 
 /* Logo */
 .nav img {
   height: 120%;
-  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
 }
 
 /* Dropdown Styling */
@@ -109,12 +138,13 @@ header.sticky {
   top: 100%;
   left: 0;
   background: #350a0d;
-  border-radius: 0px 5px;
+  border-top: 2px solid #c0b98b;
   padding: 10px;
   list-style: none;
   display: none;
   width: 180px;
-  margin-top: 4px;
+  margin-top: 2px;
+  margin: 0 auto;
 }
 
 .menu-item-has-children:hover .sub-menu {
@@ -138,8 +168,8 @@ header.sticky {
 
 /* Mobile Responsiveness */
 @media (max-width: 1024px) {
-  .navbar2 .nav-bar {
-    padding: 0 50px;
+  .navbar2 .navTop a{
+    display: none;
   }
 }
 
