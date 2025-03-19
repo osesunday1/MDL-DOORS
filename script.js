@@ -34,6 +34,16 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Hide dropdown when screen resizes to wide screens
+window.addEventListener("resize", function () {
+  var dropdown = document.getElementById("mobileDropdown");
+
+  if (window.innerWidth > 1024) {
+      dropdown.classList.remove("active");
+      dropdown.style.display = "none";
+  }
+});
+
 //--------------- DOOR TABS----------------------
 
 const tabs = document.querySelector(".doorWrapper");

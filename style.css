@@ -169,7 +169,7 @@ body{
   left: 0;
   width: 100%;
   background: #53292b;
-  z-index: 999;
+  z-index: 998;
   padding: 10px 0;
   opacity: 0;
   transform: scaleY(0); /* Initially collapsed */
@@ -236,8 +236,9 @@ body{
 /* Show the mobile logo only on smaller screens */
 .mobileLogo {
   display: none;
-  max-height: 50px;
+  max-height: 120%;
   cursor: pointer;
+  z-index: 999;
 }
 
 /* Hide big logo in mobile view */
