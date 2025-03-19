@@ -16,6 +16,24 @@ function toggleMenu() {
   }
 }
 
+// Close dropdown when a menu item is clicked
+document.addEventListener("DOMContentLoaded", function () {
+  var menuItems = document.querySelectorAll(".mobile-menu .menu-item a");
+
+  menuItems.forEach(item => {
+      item.addEventListener("click", function () {
+          var dropdown = document.getElementById("mobileDropdown");
+
+          if (dropdown.classList.contains("active")) {
+              dropdown.classList.remove("active");
+              setTimeout(() => {
+                  dropdown.style.display = "none";
+              }, 400);
+          }
+      });
+  });
+});
+
 //--------------- DOOR TABS----------------------
 
 const tabs = document.querySelector(".doorWrapper");

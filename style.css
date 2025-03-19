@@ -161,23 +161,28 @@ body{
 }
 
 /* Default: Hide the mobile dropdown */
+/* Default: Hide the mobile dropdown */
 .mobile-dropdown {
+  display: none;
   position: absolute;
-  top: -100%; /* Initially positioned above the screen */
+  top: 100%;
   left: 0;
   width: 100%;
   background: #53292b;
   z-index: 999;
   padding: 10px 0;
   opacity: 0;
-  transform: translateY(-10px); /* Start slightly above */
-  transition: transform 0.4s ease-out, opacity 0.4s ease-out;
-  display: none; /* Keep hidden by default */
+  transform: scaleY(0); /* Initially collapsed */
+  transform-origin: top; /* Ensures smooth expanding from the top */
+  transition: transform 0.2s ease-in, opacity 0.2s ease-out;
 }
+
+/* When active, apply the transition */
 .mobile-dropdown.active {
   display: block;
-  opacity: 1;
-  transform: translateY(0); /* Moves into place smoothly */
+  opacity: 0.9;
+  transform: scaleY(1); /* Expands smoothly */
+  background: #53292b;
 }
 
 
