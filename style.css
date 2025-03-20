@@ -13,6 +13,7 @@ body{
     align-items: center;
     min-height: 100vh;
     background: #ffffff;
+    padding-top: 9rem;
 }
 
 
@@ -23,7 +24,7 @@ body{
   z-index: 999;
   position: fixed;
   width: 100vw;
-  height: 8rem;
+  height: 7rem;
   top: 0;
   left: 0;
   display: flex;
@@ -193,7 +194,7 @@ body{
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 
 
   .nav .upper-menu {
@@ -225,6 +226,7 @@ body{
   color: white;
   text-decoration: none;
   font-size: 16px;
+  font-weight: 200;
   display: block;
 }
 
@@ -257,7 +259,6 @@ body{
 
 /*---------------============================Section 1==========================----------------------*/
 #intro{
-  margin-top: 5%;
 }
 
 /*-------------------------------------------------- Animated Pics--------------------------------------------*/
@@ -267,36 +268,33 @@ body{
   grid-template-columns: repeat(2, 1fr);
   gap: 0rem;
   max-width: 1200px;
+  height: 401px;
   position: relative;
   justify-content: space-between;
-  height: 100%;
   border-bottom: solid 1px #53292b;
 }
 
 /*------------------------------------------------- Animated Pics---------------------------------------------------*/
 
-
 .anime-row{
   display: flex;
-  margin-top: 10%;
   justify-content: space-between;
   font-family: poppins;
+  height: 100%;
 }
 
 .anime-row .col-1{
-  flex-basis: 40%;
-  max-width: 200px;
-  height: auto;
+  display: flex;
+  max-width: 1200px;
+  height: 400px;
   position: relative;
   margin: auto;
-  
 }
 
 
 .anime-row .col-1 img{
   width: 100%;
-  height: auto; 
-  display: block; 
+  height: 100%; 
   object-fit: contain;
 }
 
@@ -365,6 +363,9 @@ body{
 
 .mdl2{
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .mdl{
@@ -377,7 +378,6 @@ body{
   font-size: 60px;
   color: #ffffff;
   font-family: poppins;
-  margin-top: 20%;
   margin-left: 10%;
 }
 .mdl3 h3{
@@ -393,6 +393,7 @@ body{
 .mdl2 p{
   position: relative;
   font-size: 20px;
+  font-weight: 200;
   font-family: poppins;
   margin-left: 10%;
   text-align: justify;
@@ -442,7 +443,6 @@ body{
       font-size: 60px;
       color: #ffffff;
       font-family: poppins;
-      margin-top: 20%;
       margin-left: 0px;
     }
 
@@ -676,7 +676,7 @@ body{
 
 .tab-button:hover {
   color: #53292b;
-  border-bottom: solid 1px #53292b;;
+  border-bottom: solid 1px #53292b;
 }
 
 .tab-button.active {
@@ -757,7 +757,9 @@ body{
   width: 96px;
   height: auto;
 }
-
+.footer-text {
+  text-align: center;
+}
 
 @media (min-width: 768px) {
   .footer-text {
@@ -848,3 +850,4 @@ body{
 
 
 /*-----------------------=======================Footer====================-----------*/
+

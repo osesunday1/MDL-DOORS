@@ -16,6 +16,35 @@ function toggleMenu() {
   }
 }
 
+//==============================Accordion===================================
+const accordionLinks = document.querySelectorAll(".accordion-link");
+
+accordionLinks.forEach(link => {
+    link.addEventListener("click", function () {
+        const parentItem = this.parentElement;
+        const answer = parentItem.querySelector(".answer");
+
+        if (!answer) return; // Prevent errors if answer is missing
+
+        const isActive = parentItem.classList.contains("active");
+
+        // Close all open accordions and remove the 'activeAccordion' class
+        document.querySelectorAll(".accordion-item").forEach(item => {
+            item.classList.remove("active", "activeAccordion");
+            const answerContent = item.querySelector(".answer");
+            if (answerContent) answerContent.style.maxHeight = null;
+        });
+
+        // Toggle the clicked item
+        if (!isActive) {
+            parentItem.classList.add("active", "activeAccordion"); // Add both classes
+            answer.style.maxHeight = answer.scrollHeight + "px";
+        }
+    });
+});
+
+//=============================accordion==================================
+
 // Close dropdown when a menu item is clicked
 document.addEventListener("DOMContentLoaded", function () {
   var menuItems = document.querySelectorAll(".mobile-menu .menu-item a");
@@ -65,3 +94,5 @@ tabs.onclick = e => {
     element.classList.add("active");
   }
 }
+
+
