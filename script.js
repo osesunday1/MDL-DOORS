@@ -16,36 +16,48 @@ function toggleMenu() {
   }
 }
 
+
 //==============================Accordion===================================
 const accordionLinks = document.querySelectorAll(".accordion-link");
 
 accordionLinks.forEach(link => {
-    link.addEventListener("click", function () {
-        const parentItem = this.parentElement;
-        const answer = parentItem.querySelector(".answer");
+  link.addEventListener("click", function () {
+    const parentItem = this.parentElement;
+    const answer = parentItem.querySelector(".answer");
 
-        if (!answer) return; // Prevent errors if answer is missing
+    if (!answer) return;
 
-        const isActive = parentItem.classList.contains("active");
+    const isActive = parentItem.classList.contains("active");
 
-        // Close all open accordions and remove the 'activeAccordion' class
-        document.querySelectorAll(".accordion-item").forEach(item => {
-            item.classList.remove("active", "activeAccordion");
-            const answerContent = item.querySelector(".answer");
-            if (answerContent) answerContent.style.maxHeight = null;
-        });
-
-        // Toggle the clicked item
-        if (!isActive) {
-            parentItem.classList.add("active", "activeAccordion"); // Add both classes
-            answer.style.maxHeight = answer.scrollHeight + "px";
-        }
+    // Close all open accordions
+    document.querySelectorAll(".accordion-item").forEach(item => {
+      item.classList.remove("active", "activeAccordion");
+      const answerContent = item.querySelector(".answer");
+      if (answerContent) answerContent.style.maxHeight = null;
     });
+
+    // Toggle the clicked item
+    if (!isActive) {
+      parentItem.classList.add("active", "activeAccordion");
+      answer.style.maxHeight = answer.scrollHeight + "px";
+
+      // ===== PHOTO DISPLAY LOGIC HERE =====
+      const photoIndex = this.dataset.photoIndex; // get index from clicked accordion
+      const allPhotos = document.querySelectorAll(".photoDisplay img");
+
+      allPhotos.forEach((img, index) => {
+        img.classList.remove("active");
+        if (index === parseInt(photoIndex)) {
+          img.classList.add("active");
+        }
+      });
+    }
+  });
 });
 
 //=============================accordion==================================
 
-// Close dropdown when a menu item is clicked
+//======= Navbar Close dropdown when a menu item is clicked
 document.addEventListener("DOMContentLoaded", function () {
   var menuItems = document.querySelectorAll(".mobile-menu .menu-item a");
 
@@ -62,6 +74,8 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 });
+//===============mobile navbar
+
 
 // Hide dropdown when screen resizes to wide screens
 window.addEventListener("resize", function () {
@@ -78,21 +92,21 @@ window.addEventListener("resize", function () {
 const tabs = document.querySelector(".doorWrapper");
 const tabButton = document.querySelectorAll(".tab-button");
 const contents = document.querySelectorAll(".doorContent");
+const contents1 = document.querySelectorAll(".doorContent1");
 
-tabs.onclick = e => {
+tabs.onclick = (e) => {
   const id = e.target.dataset.id;
   if (id) {
-    tabButton.forEach(btn => {
-      btn.classList.remove("active");
-    });
+    tabButton.forEach(btn => btn.classList.remove("active"));
     e.target.classList.add("active");
 
-    contents.forEach(content => {
-      content.classList.remove("active");
-    });
+    contents.forEach(content => content.classList.remove("active"));
+
+    contents1.forEach(content => content.classList.remove("active"));
+
     const element = document.getElementById(id);
     element.classList.add("active");
   }
-}
+};
 
 
