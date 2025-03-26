@@ -194,6 +194,12 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .sectionDisplay .plantLogo{
+    display: none;
+  }
+}
+
 /*===============================second section===================*/
 
 .secondSectionDisplay{
