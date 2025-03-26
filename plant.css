@@ -1,12 +1,14 @@
+.intro{
+  align-items: center;
+}
 .plant-home-top{
-    margin: auto;
+  margin: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 5rem;
     position: relative;
     justify-content: center;
     max-width: 1400px;
-    border-bottom: solid 2px #53292b;
 }
 
 .sectionInfo{
@@ -37,89 +39,17 @@
     padding-bottom: 1rem;
 }
 
+@media (max-width: 1024px) {
+  .sectionHeading h2{
+    margin: auto;
+    width: 100%;
+    text-align: center;
+  }
+}
+
 /*========================== right section ==========================*/
 
-.sectionDisplay{
-    background: #ffffff;
-    width: 100%;
-}
 
-.sectionDisplay .doorWrapper{
-    gap: 0px;
-    height: 100%;
-    width: 100%;
-} 
-
-.sectionDisplay .buttonWrapper{
-    display: flex;
-    justify-content:flex-end;
-    width:100% ;
-    background: none;
-    text-transform: none;
-    height: 40px;
-    font-size: 10px;
-    font-weight: 200;
-}
-
-.sectionDisplay .tab-button{
-    display: flex;
-    align-items: center;
-    font-size: 30px;
-    letter-spacing: 0px;
-    color: #53292b;
-    text-transform: none;
-    height: 100%;
-    border-radius: 10px 10px 0px 0px;
-}
-
-.sectionDisplay .tab-button:hover {
-    background: #53292b;
-    color: #ffffff;
-  }
-
-.sectionDisplay .tab-button.active {
-    background: #53292b;
-    color: #ffffff;
-  }
-
-
-.sectionDisplay .contentWrapper1{
-    position: relative;
-    overflow: hidden; 
-    border: solid 1px #53292b;
-    height: 100%;
-    width: 100%;
-}
-
-.sectionDisplay .doorContent1 {
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    transition: opacity 0.5s ease-in-out;
-    text-align: center;
-    padding: 10px 10px;
-    pointer-events: none;
-  }
-  
-.sectionDisplay .doorContent1.active {
-    opacity: 1;
-    visibility: visible;
-    position: relative;
-    pointer-events: auto;
-  }
-
-  @media (max-width: 1024px) {
-
-    .plant-home-top {
-        display: flex;
-        flex-direction: column;
-        padding-block: 2rem;
-        width: min(95%, 70rem);
-      }
-}
 
 /*==========plant logo=============*/
 
@@ -264,10 +194,104 @@
   }
 }
 
+/*===============================second section===================*/
+
+.secondSectionDisplay{
+  max-width: 1400px;
+  margin: auto;
+}
+
+.secondSectionDisplay .accordion{
+  width: 100%;
+}
+
+
+.secondSectionDisplay .plantBrands{
+  display: flex;
+  justify-content:center;
+  flex-wrap: wrap;
+  gap:10%;
+}
+
+.secondSectionDisplay .brands{
+  max-width: 350px;
+  min-height: 150px;
+  padding: 5px;
+}
+
+.secondSectionDisplay h4{
+  font-size: 20px;
+  font-weight: 300;
+  min-height: 60px;
+  display: flex;
+  text-align: center;
+  background: #53292b;
+  color: #dbd7bc;
+  justify-content: center;
+  align-items: center;
+}
+
+.secondSectionDisplay .brandInfo{
+  display: flex;
+}
+
+.secondSectionDisplay p{
+  font-weight: 300;
+}
+
+.secondSectionDisplay .brandLogo{
+  max-width: 180px;
+  max-height: 100px;
+}
+
+.secondSectionDisplay .brandLogo img{
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+
+@media (max-width: 1024px) {
+
+  .plant-home-top {
+      display: flex;
+      flex-direction: column;
+      padding-block: 2rem;
+      width: min(95%, 70rem);
+      border-bottom: none;
+    }
+.plant-home-top .sectionDisplay{
+  display: none;
+}
+
+.secondSectionDisplay .accordion-link{
+  background:#53292b ;
+}
+.secondSectionDisplay h1{
+  color: #ffffff;
+
+}
+
+.secondSectionDisplay h4{
+  color: #ffffff;
+}
+}
+
+/*------pland Accordeion-------/*
+
+/*===============================second section===================*/
+
+
+/*=====================3rd Section====================*/
+.thirdSectionDisplay{
+max-width: 1400px;
+margin: auto;
+}
+
 /*========================== PLANT FORM ==========================*/
 
-
-.doorWrapper .formbg {
+.thirdSectionDisplay .formbg {
+  padding: 20px;
   margin: 0px auto;
   width: 100%;
   background: white;
@@ -275,7 +299,7 @@
   box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
 }
 
-.doorWrapper .field{
+.thirdSectionDisplay .field{
   display: flex;
   width: 100%;
   gap: 10px;
@@ -287,11 +311,11 @@
   margin: 0 auto;
 }
 
-.doorWrapper .input-data{
+.thirdSectionDisplay .input-data{
   width: 100%;
 }
 
-.doorWrapper .field input {
+.thirdSectionDisplay .field input {
   font-size: 16px;
   line-height: 28px;
   padding: 8px 16px;
@@ -311,7 +335,7 @@
 }
 
 
-.doorWrapper  select{
+.thirdSectionDisplay  select{
   font-size: 16px;
   line-height: 28px;
   padding: 8px 16px;
@@ -331,7 +355,7 @@
 }
 
 
-.doorWrapper  textarea{
+.thirdSectionDisplay  textarea{
   font-size: 16px;
   line-height: 28px;
   padding: 8px 16px;
@@ -351,7 +375,7 @@
 }
 
 
-.doorWrapper .input-data label{
+.thirdSectionDisplay .input-data label{
   display: flex;
   width: 100%;
   transition: 0.3s ease all;
@@ -362,7 +386,7 @@
   font-size: 12px;
 }
 
-.doorWrapper .field .formSubmit{
+.thirdSectionDisplay .field .formSubmit{
   font-size: 16px;
   padding: 10px 15px;
   background:#53292b;
@@ -371,7 +395,7 @@
   border-radius: 5px;
 }
 
-.doorWrapper .field .formSubmit:hover{
+.thirdSectionDisplay .field .formSubmit:hover{
   background:#613235;
   cursor: pointer;
 }

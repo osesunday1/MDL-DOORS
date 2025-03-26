@@ -92,7 +92,6 @@ window.addEventListener("resize", function () {
 const tabs = document.querySelector(".doorWrapper");
 const tabButton = document.querySelectorAll(".tab-button");
 const contents = document.querySelectorAll(".doorContent");
-const contents1 = document.querySelectorAll(".doorContent1");
 
 tabs.onclick = (e) => {
   const id = e.target.dataset.id;
@@ -102,11 +101,11 @@ tabs.onclick = (e) => {
 
     contents.forEach(content => content.classList.remove("active"));
 
-    contents1.forEach(content => content.classList.remove("active"));
 
     const element = document.getElementById(id);
     element.classList.add("active");
   }
 };
+
 
 
