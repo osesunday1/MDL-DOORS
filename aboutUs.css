@@ -123,6 +123,10 @@
         width: min(95%, 70rem);
       }
 
+      .photoDisplay{
+        width: 90%;
+      }
+
 }
 
     
