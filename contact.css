@@ -1,0 +1,148 @@
+/*===============================first section===================*/
+.contact-home-top{
+    margin: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 5rem;
+      position: relative;
+      justify-content: center;
+      max-width: 1400px;
+  }
+  
+  .contact-home-top .formbg {
+    padding: 20px;
+    margin: 0px auto;
+    width: 100%;
+    background: white;
+    border-radius: 4px;
+    box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+  }
+
+ .formbg {
+    padding: 20px;
+    margin: 0px auto;
+    width: 100%;
+    background: white;
+    border-radius: 4px;
+    box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+  }
+  
+.field{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    margin: 0 auto;
+  }
+  
+.input-data{
+    width: 100%;
+  }
+  
+.field input {
+    font-size: 16px;
+    line-height: 28px;
+    padding: 8px 16px;
+    width: 100%;
+    min-height: 44px;
+    border: unset;
+    border-radius: 4px;
+    outline-color: #53292b;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(60, 66, 87, 0.16) 0px 0px 0px 1px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+  }
+  
+  
+select{
+    font-size: 16px;
+    line-height: 28px;
+    padding: 8px 16px;
+    width: 100%;
+    min-height: 44px;
+    border: unset;
+    border-radius: 4px;
+    outline-color: #53292b;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(60, 66, 87, 0.16) 0px 0px 0px 1px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+  }
+  
+  
+ textarea{
+    font-size: 16px;
+    line-height: 28px;
+    padding: 8px 16px;
+    width: 100%;
+    min-height: 44px;
+    border: unset;
+    border-radius: 4px;
+    outline-color: #53292b;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(60, 66, 87, 0.16) 0px 0px 0px 1px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+  }
+  
+  
+.input-data label{
+    display: flex;
+    width: 100%;
+    transition: 0.3s ease all;
+  }
+  
+  /* Style label when input inside .input-data is focused */
+  .input-data:focus-within label {
+    font-size: 12px;
+  }
+  
+ .field .formSubmit{
+    font-size: 16px;
+    padding: 10px 15px;
+    background:#53292b;
+    cursor: pointer;
+    color: #ffffff;
+    border-radius: 5px;
+  }
+  
+  .field .formSubmit:hover{
+    background:#613235;
+    cursor: pointer;
+  }
+.contact-home-top .photoDisplay{
+}
+  
+  @media (max-width: 1024px) {
+
+    .CONTACT-home-top {
+        display: flex;
+        flex-direction: column;
+        padding-block: 2rem;
+        width: min(95%, 70rem);
+      }
+
+      .photoDisplay{
+        width: 90%;
+      }
+
+}
+
+/*------------------------------first section--------------------*/
