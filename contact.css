@@ -142,9 +142,10 @@ select{
 .contactInfo .contactAddress{
   width: 100%;
   padding-left: 10px;
-  border-left: 1px solid #53292b;
-  border-bottom: 1px solid #53292b;
   margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
 .contactInfo .section{
@@ -154,13 +155,16 @@ select{
   justify-content: flex-start; 
   width: 100%;
   gap: 5px;
+  background: #53292b;
+  padding: 5px;
+  border-radius: 10px;
 }
 
 
 .contactInfo h3{
   font-size: 17px;
   font-weight: 400;
-  color: #53292b;
+  color: #ffffff;
   font-family: poppins;
   text-transform: capitalize;
   margin: 0;
@@ -169,7 +173,7 @@ select{
 .contactInfo p{
   font-size: 17px;
   font-weight: 300;
-  color: #53292b;
+  color: #ffffff;
   font-family: poppins;
   text-transform: capitalize;
 }
