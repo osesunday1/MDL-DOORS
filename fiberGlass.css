@@ -1,0 +1,67 @@
+.introFiber{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+}
+
+.introFiber h3{
+    position: relative;
+    font-size: 50px;
+    font-weight: 300;
+    color: #53292b;
+    font-family: poppins;
+    margin: 0 auto;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+
+.sectionDisplay2{
+    margin: 0 auto;
+    max-width: 500px;
+    border-radius: 20px;
+}
+.sectionDisplay2 img{
+    width: 100%;
+    border-radius: 20px;
+    object-fit: contain;
+}
+
+.doorFeatures{
+    width: 100%;
+    margin: auto;
+    margin-top:3% ;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.doorFeatures .featureCard{
+    width: 400px;
+    padding: 2rem;
+    border-top: 5px solid #53292b;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.doorFeatures h4{
+    font-size: 20px;
+    font-weight: 300;
+    min-height: 60px;
+    display: flex;
+    text-align: center;
+    color: #53292b;
+    justify-content:flex-start;
+    align-items: center;
+}
+
+.doorFeatures ul {
+    font-weight: 100;
+    padding-left: 1rem;
+    margin: 0 auto;
+}
+
+.doorFeatures ul li{
+    font-weight: 100;
+    padding-bottom: 0.5rem;
+}
